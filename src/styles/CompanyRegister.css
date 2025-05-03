@@ -1,0 +1,160 @@
+.company-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .company-welcome {
+    flex: 1;
+    color: #fff;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to top right, #1a1a1d, #343a40);
+  }
+  
+  .company-welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .company-welcome p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 480px;
+  }
+  
+  
+  .company-form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef1f5;
+    padding: 2rem;
+  }
+  
+  .company-form {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 430px;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .company-form h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: #222;
+    font-size: 1.7rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1.4rem;
+  }
+  
+  .input-group label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    display: block;
+    color: #444;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.2s ease;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #3a9cff;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .company-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #3a9cff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .company-btn:hover {
+    background: #2377d9;
+  }
+  
+  .switch-link {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .switch-link span {
+    color: #3a9cff;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .switch-link span:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .company-container {
+      flex-direction: column-reverse;
+    }
+  
+    .company-welcome {
+      display: none;
+    }
+  
+    .company-form-section {
+      width: 100%;
+      padding: 2rem;
+    }
+  
+    .company-form {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+  }
+  

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../services/axiosInstance';
 import { useNavigate } from 'react-router-dom';
+import "../styles/UserDashboard.css";
+ // إضافة التنسيق الخاص بالـ Dashboard
 
 const UserDashboard = () => {
   const [maps, setMaps] = useState([]);
@@ -20,28 +22,20 @@ const UserDashboard = () => {
 
   return (
     <div className="dashboard">
-      <h2> Welcome back👋!</h2>
+      <h2 className="welcome-text"> Welcome back👋!</h2>
       <h3>Your Maps 🗺️</h3>
 
       {maps.length === 0 ? (
         <p>No maps found. Let's create one! ✨</p>
       ) : (
-        <ul>
+        <ul className="maps-list">
           {maps.map(map => (
-            <li key={map.id} style={{ marginBottom: '10px' }}>
+            <li key={map.id} className="map-item">
               <strong>{map.name}</strong> — {map.description}
               <br />
               <button
                 onClick={() => navigate(`/maps/${map.id}`)}
-                style={{
-                  marginTop: '5px',
-                  padding: '5px 10px',
-                  background: '#007bff',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer'
-                }}
+                className="view-map-btn"
               >
                 View Map 📍
               </button>

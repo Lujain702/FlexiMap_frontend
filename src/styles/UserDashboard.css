@@ -1,0 +1,43 @@
+.dashboard {
+    padding: 40px;
+    background: linear-gradient(135deg, #f3f4f6, #e0e7ff); 
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .maps-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .map-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-map-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-map-btn:hover {
+    background-color: #005ecb;
+  }
+  

@@ -1,0 +1,33 @@
+/* src/styles/PageStyle.css */
+.page-container {
+    padding: 40px;
+    background: #eef2f7;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .styled-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    list-style: none;
+    padding: 0;
+  }
+  
+  .styled-list li {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .styled-list li:hover {
+    transform: scale(1.03);
+  }
+  

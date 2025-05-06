@@ -1,0 +1,79 @@
+/* src/styles/MarkersPage.css */
+.markers-wrapper {
+  padding: 40px;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff); 
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.markers-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3b82f6;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.markers-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+  margin-top: 20px;
+}
+
+.marker-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.marker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.marker-card .marker-icon {
+  font-size: 3rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.marker-card h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.marker-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.view-map-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.view-map-link:hover {
+  color: #1e40af;
+}
+
+.marker-card .marker-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #4b5563;
+}

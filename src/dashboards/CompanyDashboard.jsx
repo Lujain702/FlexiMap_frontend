@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import axiosInstance from '../services/axiosInstance';
 
 const CompanyDashboard = () => {
   const [maps, setMaps] = useState([]);
@@ -10,7 +10,7 @@ const CompanyDashboard = () => {
   useEffect(() => {
     const fetchMaps = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/maps/', {
+        const response = await axiosInstance.get('http://localhost:8000/api/maps/', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -32,7 +32,7 @@ const CompanyDashboard = () => {
     <div className="company-dashboard">
       <h2>Company Dashboard🏢</h2>
       <button onClick={handleCreate} className="create-map-btn">
-        ➕ Create New Map
+        Create New Map➕ 
       </button>
       <div className="map-list">
         {maps.length > 0 ? (

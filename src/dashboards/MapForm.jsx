@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../services/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 
 const MapForm = () => {
@@ -12,17 +12,9 @@ const MapForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post(
-        'http://localhost:8000/api/maps/',
-        { name, description },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        }
-      );
+        await axiosInstance.post('/maps/', { name, description });
       alert('🗺️ Map created successfully!');
-      navigate('/dashboard'); // back to dashboard
+      navigate('/dashboard'); 
     } catch (error) {
       console.error('❌ Failed to create map:', error);
       alert('Something went wrong! 🥲');

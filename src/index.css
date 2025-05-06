@@ -1,136 +1,153 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1e1e1e;
+  background-color: #ffffff;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+a {
+  font-weight: 500;
+  color: #0072ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+a:hover {
+  color: #00c6ff;
+}
+
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw; 
+  z-index: 1000;
+}
+
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logo span {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.logo:hover span {
+  transform: rotate(360deg);
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.logout-btn,
+.dropbtn {
+  background-color: #b3e5fc;
+  color: #00334e;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.logout-btn:hover,
+.dropbtn:hover {
+  background-color: #81d4fa;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e0f7ff;
+  min-width: 220px;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content a {
+  color: #00334e;
+  padding: 0.5rem 0.8rem;
+  display: block;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #b3e5fc;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.logout-btn {
+  font-size: 0.95rem;
+}
+
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
+  background-color: #0072ff;
+  color: white;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-
-.company-dashboard {
-  padding: 2rem;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.create-map-btn {
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.create-map-btn:hover {
-  background-color: #5a54d1;
-}
-
-.map-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.map-list li {
-  background: #f5f5f5;
-  margin-bottom: 0.5rem;
-  padding: 0.7rem;
-  border-radius: 6px;
-}
-.map-form-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.map-form label {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.map-form input,
-.map-form textarea {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.map-form button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.map-form button:hover {
-  background-color: #218838;
+  background-color: #005ecb;
+  transform: scale(1.03);
 }
 

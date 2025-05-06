@@ -1,0 +1,88 @@
+.map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  padding: 40px 20px;
+  margin-top: 40px;
+  background: linear-gradient(to right, #f0f8ff, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.map-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+
+.leaflet-container {
+  width: 80%;             
+  height: 60vh;          
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.leaflet-popup-content {
+  font-size: 15px;
+  color: #333;
+  text-align: right;
+}
+
+.leaflet-popup-content strong {
+  color: #007bff;
+  font-size: 16px;
+}
+
+.leaflet-popup-tip {
+  background-color: #e8f0fe;
+}
+
+
+.marker-form-container {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin-top: 20px;
+  align-self: center; 
+}
+
+.marker-form-container input,
+.marker-form-container textarea,
+.marker-form-container select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.marker-form-container button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.marker-form-container button:hover {
+  background-color: #218838;
+}

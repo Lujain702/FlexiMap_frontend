@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axiosInstance from '../services/axiosInstance';
 import { useNavigate } from 'react-router-dom';
+import '../styles/MapForm.css'; 
+import backgroundImage from '../assets/background.jpg'; 
 
 const MapForm = () => {
   const [name, setName] = useState('');
@@ -12,9 +14,9 @@ const MapForm = () => {
     e.preventDefault();
 
     try {
-        await axiosInstance.post('/maps/', { name, description });
+      await axiosInstance.post('/maps/', { name, description });
       alert('🗺️ Map created successfully!');
-      navigate('/dashboard'); 
+      navigate('/user-dashboard');
     } catch (error) {
       console.error('❌ Failed to create map:', error);
       alert('Something went wrong! 🥲');
@@ -22,11 +24,19 @@ const MapForm = () => {
   };
 
   return (
-    <div className="map-form-container">
-      <h2>➕ Create New Map</h2>
+    <div
+      className="map-form-container"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <form onSubmit={handleSubmit} className="map-form">
+        <h2>Create New Map ➕</h2> 
         <label>
-          📝 Name:
+          Name 📝:
           <input
             type="text"
             value={name}
@@ -35,14 +45,14 @@ const MapForm = () => {
           />
         </label>
         <label>
-          📄 Description:
+          Description 📄:
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
           />
         </label>
-        <button type="submit">🚀 Submit</button>
+        <button type="submit">Submit🚀</button>
       </form>
     </div>
   );

@@ -21,7 +21,7 @@ const MarkersPage = () => {
 
   return (
     <div className="markers-wrapper">
-      <h1 className="markers-title">📍 All Markers</h1>
+      <h1 className="markers-title">All Markers📍 </h1>
       <div className="markers-grid">
         {markers.map(marker => (
           <div key={marker.id} className="marker-card">

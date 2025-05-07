@@ -105,8 +105,6 @@ const AddMarkerForm = () => {
             'Foodie Spot 🍽️',
             'University 🏫',
             'Educational 🎓',
-            'Park',
-            'River'
           ].map((tag, index) => (
             <label key={index} className="tag-checkbox">
               <input

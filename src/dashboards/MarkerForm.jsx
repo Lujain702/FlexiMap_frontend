@@ -75,7 +75,7 @@ const MarkerForm = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">🚀 Submit Marker</button>
+        <button type="submit">Submit Marker🚀</button>
       </form>
     </div>
   );

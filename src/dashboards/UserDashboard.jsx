@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axiosInstance from '../services/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import "../styles/UserDashboard.css";
- // إضافة التنسيق الخاص بالـ Dashboard
+ 
 
 const UserDashboard = () => {
   const [maps, setMaps] = useState([]);

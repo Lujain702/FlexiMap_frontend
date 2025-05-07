@@ -62,11 +62,7 @@ const Navbar = () => {
                 <Link to="/company/dashboard"><FaBuilding /> Company Dashboard 🏢</Link>
                 <Link to="/user/dashboard"><FaUserCircle />User Dashboard 👤 </Link>
                 <Link to="/maps/new"><FaMapMarkedAlt /> Create Map 🗺️</Link>
-                {/* <Link to="/markers/new"><FaThumbtack />Add Marker 📍 </Link> */}
                 <Link to="/markers"><FaMap /> All Markers 📌</Link>
-                {/* <Link to="/categories"><FaMap /> Categories 📂</Link> */}
-                {/* <Link to="/tags"><FaMap /> Tags 🎯</Link> */}
-                {/* <Link to="/map"><FaMap /> Explore Riyadh 🗺️</Link> */}
                 <Link to="/markers/add"> Add Marker➕</Link>
               </div>
             </li>

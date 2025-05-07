@@ -41,27 +41,32 @@ function MapDetails() {
     fetchMapAndMarkers();
   }, [id]);
 
-  if (loading) return <p>⏳ Loading map details...</p>;
+  if (loading) return <p> Loading map details...⏳</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="map-wrapper">
-      <h2 style={{ textAlign: 'center' }}>🗺️ {mapData.name}</h2>
-      <p style={{ textAlign: 'center', marginBottom: '20px' }}>{mapData.description}</p>
 
       <MapContainer
-        center={[24.774265, 46.738586]} // Riyadh
-        zoom={13}
-        scrollWheelZoom={true}
-        style={{ height: '80vh', borderRadius: '12px' }}
-      >
+  center={[24.774265, 46.738586]} // Riyadh
+  zoom={13}
+  scrollWheelZoom={true}
+  style={{
+    height: '400px',  
+    width: '100%',
+    maxWidth: '800px',
+    margin: '0 auto',
+    borderRadius: '12px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }}
+>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
         {markers.map(marker => (
           <Marker
-            key={marker.id}
-            position={[marker.latitude, marker.longitude]}
-            icon={customIcon}
+          key={marker.id}
+          position={[marker.latitude, marker.longitude]}
+          icon={customIcon}
           >
             <Popup>
               <strong>📍 {marker.title}</strong><br />
@@ -72,7 +77,9 @@ function MapDetails() {
       </MapContainer>
 
       <div style={{ marginTop: '30px' }}>
-        <h3 style={{ textAlign: 'center' }}>➕ Add New Marker</h3>
+        <h2 style={{ textAlign: 'center' }}>🗺️ {mapData.name}</h2>
+        <p style={{ textAlign: 'center', marginBottom: '20px' }}>{mapData.description}</p>
+        <h3 style={{ textAlign: 'center' }}>Add New Marker➕</h3>
         <form
           onSubmit={async (e) => {
             e.preventDefault();
@@ -111,10 +118,10 @@ function MapDetails() {
             background: '#f9f9f9',
           }}
         >
-          <input type="text" name="title" placeholder="📍 Marker Title" required />
-          <textarea name="description" placeholder="📝 Description" required />
-          <input type="number" step="any" name="latitude" placeholder="📌 Latitude" required />
-          <input type="number" step="any" name="longitude" placeholder="📌 Longitude" required />
+          <input type="text" name="title" placeholder="Marker Title📍 " required />
+          <textarea name="description" placeholder=" Description📝 " required />
+          <input type="number" step="any" name="latitude" placeholder=" Latitude📌" required />
+          <input type="number" step="any" name="longitude" placeholder=" Longitude📌" required />
           <button
             type="submit"
             style={{
@@ -127,7 +134,7 @@ function MapDetails() {
               cursor: 'pointer'
             }}
           >
-            ➕ Add Marker
+            Add Marker ➕ 
           </button>
         </form>
       </div>

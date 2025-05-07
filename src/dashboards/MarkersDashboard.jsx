@@ -4,7 +4,7 @@ import "../styles/MarkersDashboard.css";
 
 const MarkersDashboard = () => {
   const [markers, setMarkers] = useState([]);
-  const [editingMarker, setEditingMarker] = useState(null); // 👈 لتحديد العنصر الذي يتم تعديله
+  const [editingMarker, setEditingMarker] = useState(null); 
   const token = localStorage.getItem('token');
 
   useEffect(() => {

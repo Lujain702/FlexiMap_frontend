@@ -16,7 +16,7 @@ const MapForm = () => {
     try {
       await axiosInstance.post('/maps/', { name, description });
       alert('🗺️ Map created successfully!');
-      navigate('/user-dashboard');
+      navigate('/user/dashboard');
     } catch (error) {
       console.error('❌ Failed to create map:', error);
       alert('Something went wrong! 🥲');
